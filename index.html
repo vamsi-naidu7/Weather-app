@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWave PureJS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WeatherWave</h1>
+            <div class="search-container">
+                <input type="text" id="locationInput" placeholder="Enter city name">
+                <button id="searchButton">Search</button>
+            </div>
+        </header>
+
+        <main id="weatherDisplay" class="weather-display">
+            <div id="loadingIndicator" class="loading" style="display: none;">Loading...</div>
+            <div id="errorDisplay" class="error-message" style="display: none;"></div>
+
+            <div class="current-weather-card" style="display: none;">
+                <h2 id="locationName"></h2>
+                <p id="currentDate"></p>
+                <div class="current-main">
+                    <span id="currentIcon" class="weather-icon"></span>
+                    <span id="currentTemp" class="temperature"></span>
+                </div>
+                <p id="currentCondition" class="condition"></p>
+                <div class="current-details">
+                    <p>Feels like: <span id="currentFeelsLike"></span></p>
+                    <p>Humidity: <span id="currentHumidity"></span></p>
+                    <p>Wind: <span id="currentWind"></span></p>
+                </div>
+            </div>
+
+            <div class="hourly-forecast-card" style="display: none;">
+                <h3>Hourly Forecast</h3>
+                <div class="hourly-scroller-container">
+                    <div id="hourlyForecastScroller" class="hourly-scroller">
+                        <!-- Hourly items will be injected here by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
